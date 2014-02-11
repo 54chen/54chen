@@ -1,0 +1,15 @@
+title:  Function: updateorgnames()
+link: http://www.54chen.com/life/function-updateorgnames.html
+author: cc0cc
+description: 
+post_id: 303
+created: 2008/12/10 11:12:45
+created_gmt: 2008/12/10 03:12:45
+comment_status: open
+post_name: function-updateorgnames
+status: private
+post_type: post
+
+#  Function: updateorgnames()
+
+\-- Function: updateorgnames()   \-- DROP FUNCTION updateorgnames();   CREATE OR REPLACE FUNCTION updateorgnames()   RETURNS trigger AS $BODY$ DECLARE         orgname text;         existflag int; BEGIN         --RAISE NOTICE 'Update User_profile';         IF NEW.nick !='' THEN                 --RAISE NOTICE 'NEW.nick=%, NEW.picurl=%, NEW.id=%', NEW.nick, NEW.picurl, NEW.id;                 UPDATE recommendation set nick=NEW.nick where recomid=NEW.id  and nick='';         END IF;         IF NEW.picurl is not NULL THEN                 UPDATE recommendation set picurl=NEW.picurl where recomid=NEW.id  and picurl='';         END IF;         existflag :=0;         IF NEW.workexp is not null THEN                 --RAISE NOTICE 'NEW.workexp=%',NEW.workexp ;                 FOR orgname IN (select * from recom_getorgname(NEW.workexp)) LOOP                         SELECT count(name) INTO existflag from recom_upexporg where name=orgname and type=1;                         IF existflag > 0 THEN                                 UPDATE recom_upexporg set last_modified=now() where name like orgname and type=1;                         ELSE                                 INSERT INTO recom_upexporg (name,type,last_modified) values (orgname,1,now());                         END IF;                 END LOOP;         END IF;           existflag :=0;         IF NEW.collegeexp is not null THEN                 --RAISE NOTICE 'NEW.collegeexp=%',NEW.collegeexp  ;                 FOR orgname IN (select * from recom_getorgname(NEW.collegeexp)) LOOP                         SELECT count(name) INTO existflag from recom_upexporg where name=orgname and type=3;                         IF existflag>0 THEN                                 UPDATE recom_upexporg set last_modified=now() where name like orgname and type=3;                         ELSE                                 INSERT INTO recom_upexporg (name,type,last_modified) values (orgname,3,now());                         END IF;                 END LOOP;         END IF;           existflag :=0;         IF NEW.schoolexp is not null THEN                 FOR orgname IN (select * from recom_getorgname(NEW.schoolexp)) LOOP                         SELECT count(name) INTO existflag from recom_upexporg where name=orgname and type=4 ;                         IF existflag>0 THEN                                 UPDATE recom_upexporg set last_modified=now() where name like orgname and type=4;                                         ELSE                                 INSERT INTO recom_upexporg (name,type,last_modified) values (orgname,4,now());                         END IF;                 END LOOP;         END IF;           return NEW; END; $BODY$   LANGUAGE 'plpgsql' VOLATILE   COST 100; ALTER FUNCTION updateorgnames() OWNER TO yahoo;

@@ -1,0 +1,15 @@
+title: 人肉解析riak_admin join
+link: http://www.54chen.com/document/riak_admin-join.html
+author: 54chen
+description: 
+post_id: 2004
+created: 2012/02/10 20:21:03
+created_gmt: 2012/02/10 12:21:03
+comment_status: open
+post_name: riak_admin-join
+status: publish
+post_type: post
+
+# 人肉解析riak_admin join
+
+![riak](http://img04.taobaocdn.com/imgextra/i4/13078490/T2AT9jXolXXXXXXXXX_!!13078490.jpg) riak_admin只是一个bash脚本，当riak_admin join被执行时，都是在执行riak_kv_console join。 **大概过程分析** riak_kv_console:join => %%入口 riak:Join(Node) => %% 真正执行 riak_core:join(Node) => %%去到riak_core riak_core_gossip:legacy_gossip() => %%通知检查是否是 legacy gossip， riak_core:standard_join(Node,Ring,false) => %%非rejoin 非legacy riak_core_gossip:send_ring(Node, node()) => %% 进入gossip模块发起ring请求 gen_server:cast({?MODULE, FromNode}, {send_ring_to, ToNode}) => %%广而告之 riak_core_gossip:handle_cast({send_ring_to, Node}, State) => %%收到 gen_server:cast({?MODULE, Node}, {reconcile_ring, RingOut}) => %%告诉它们开始协调 riak_core_gossip:handle_cast({reconcile_ring, RingIn}, State) => %%收到 riak_core_ring_manager:ring_trans(fun reconcile/2, [OtherRing]) => %%由一个协调函数传入到ring manager中去执行 riak_core_ring_manager:prune_write_notify_ring => %%搞定一个新的ring文件，通知所有的listener riak_core_ring_events:ring_update(Ring) => %%通过event通知 riak_core_ring_handler:handle_event({ring_update, Ring}, State) => %%接到event riak_core_vnode_manager:ring_changed(Ring) => %%vnode_manager通知大家环修改了 riak_core_vnode_manager:trigger_ownership_handoff(?MODULE, {ring_changed, Ring}) =>%%接通知触发handoff riak_core_vnode:trigger_handoff(Pid, TargetNode) => %%由vnode来干活 gen_fsm:send_all_state_event(VNode, {trigger_handoff, TargetNode}) => %%使用gen_fsm来通知vnode们 riak_core_vnode:maybe_handoff => %%准备开始导数据 riak_core_vnode:start_handoff => %%开始 riak_core_handoff_manager:add_outbound => %%发handoff handle_call({add_outbound,Mod,Idx,Node,Pid},_From,State=#state{handoffs=HS}) => %%收到请求 riak_core_handoff_manager:send_handoff => %%发 riak_core_handoff_sender_sup:start_sender => %%启动sender 最终启动了 riak_core_vnode_master:sync_command直到同步结束。 **riak_core_vnode:mark_handoff_complete** 此代码生存在riak_core_vnode，而不是riak_core_vnode_manager，因为ring_trans是一个同步的call到ring manager的过程，block一个单独的vnode要比block整个vnode manager要好。block这个manager会影响所有的vnode。此代码对多个并行的vnode执行是安全 的,因为靠单个 ring manager提供的同步化保证了拥有所有的环的变更经过 。 **riak_core_vnode:vnode_command** 活动的vnode运行于三种状态中：正常、handoff、推进。 在正常状态，vnode命令靠handle_command来传递。当一个handoff被触发，handoff_node被设置为目标节点，并且这个vnode被称做进入了handoff状态。 在handoff状态，vnode命令依靠handle_handoff_command来传递。即使handoff程序是非block的（比如在riak_kv中没有使用async fold时），在handoff期间，一个vnode也会被block住（所以没有服务命令）。 handoff状态之后，一个vnode会进入到推进状态。推进状态是新的gossip/membership代码的产物，并且legacy模式的节点里不会出现。推进状态代表了vnode已经传递自己数据到新节点的情况，但新的节点并未在环上列出当前节点的信息。这会出现是因为增加的vnode仍然在等handoff他们的数据给新的拥有者，或者只是因为环还汇聚在这个新节点之上。在推进状态，所有的vnode指令和coverage命令都会按过程推给新的拥有者。 ** riak_core_vnode:start_manager_event_timer** 独有的vnode进程与vnode manager结合紧密。当vnode的事件触发，这个vnode必须确保这个事件被发送到vnode manager，这将会产生一个状态变化的决定，并且发回适当的信息给这个vnode。为了最大限度地减少阻塞，使用了异步的消息。vnode manager挂掉而丢失靠vnode发送的信息是可能的。因此，vnode周期性地重发事件消息，直到一个从vnode manager来的合适的消息被接收。
