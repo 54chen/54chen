@@ -8,7 +8,7 @@ Thanks for visiting so humble place :rofl:
 - 👨‍💻 &nbsp;Read more about my projects at [54chen.com](https://www.54chen.com/)
 - ⚡ &nbsp;One More Thing: I am a researcher in Computer Science and creator in Web3.
 
-📕 &nbsp;**Latest Blog Posts**
+📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
 - [DAOs, A Canon](https://t.54chen.com/daos-canon/)
 - [DAOs加农炮](https://t.54chen.com/cn/daos-canon/)
