@@ -10,4 +10,8 @@ Thanks for visiting so humble place :rofl:
 
 📕 &nbsp;**Latest Blog Posts**
 <!-- BLOG-POST-LIST:START -->
+- [DAOs, A Canon](https://t.54chen.com/daos-canon/)
+- [DAOs加农炮](https://t.54chen.com/cn/daos-canon/)
+- [The economical history of Metaverse](https://t.54chen.com/daos-history/)
+- [元宇宙的经济历史入门](https://t.54chen.com/cn/daos-history/)
 <!-- BLOG-POST-LIST:END -->
