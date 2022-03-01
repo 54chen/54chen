@@ -10,8 +10,8 @@ Thanks for visiting so humble place :rofl:
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
-- [DAOs, A Canon](https://t.54chen.com/daos-canon/)
-- [DAOs加农炮](https://t.54chen.com/cn/daos-canon/)
-- [The economical history of Metaverse](https://t.54chen.com/daos-history/)
-- [元宇宙的经济历史入门](https://t.54chen.com/cn/daos-history/)
+- [What Is an Automated Market Maker &lpar;AMM&rpar;?](https://www.54chen.com/amm/)
+- [什么是自动做市商 &lpar;AMM&rpar;?](https://www.54chen.com/cn/amm/)
+- [DAOs, A Canon](https://www.54chen.com/daos-canon/)
+- [DAOs加农炮](https://www.54chen.com/cn/daos-canon/)
 <!-- BLOG-POST-LIST:END -->
