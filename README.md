@@ -10,8 +10,8 @@ Thanks for visiting so humble place :rofl:
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
+- [DAO and the disruption of the Chinese world](https://www.54chen.com/dao/)
+- [DAO以及对中文世界的颠覆](https://www.54chen.com/cn/dao/)
 - [What Is an Automated Market Maker &lpar;AMM&rpar;?](https://www.54chen.com/amm/)
 - [什么是自动做市商 &lpar;AMM&rpar;?](https://www.54chen.com/cn/amm/)
-- [DAOs, A Canon](https://www.54chen.com/daos-canon/)
-- [DAOs加农炮](https://www.54chen.com/cn/daos-canon/)
 <!-- BLOG-POST-LIST:END -->
