@@ -10,8 +10,8 @@ Thanks for visiting so humble place :rofl:
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
+- [元启发式算法手记一 入门](https://www.54chen.com/cn/metaheuristics-1/)
 - [网络安全基础一览](https://www.54chen.com/cn/cyber-security/)
 - [DAO and the disruption of the Chinese world](https://www.54chen.com/dao/)
 - [DAO以及对中文世界的颠覆](https://www.54chen.com/cn/dao/)
-- [What Is an Automated Market Maker &lpar;AMM&rpar;?](https://www.54chen.com/amm/)
 <!-- BLOG-POST-LIST:END -->
