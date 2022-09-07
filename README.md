@@ -10,8 +10,8 @@ Thanks for visiting so humble place :rofl:
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
+- [区块链安全-Solidity安全建议](https://www.54chen.com/cn/solidity-security/)
 - [元启发式算法手记一 入门](https://www.54chen.com/cn/metaheuristics-1/)
+- [元启发式算法手记二 GRASP](https://www.54chen.com/cn/metaheuristics-2/)
 - [网络安全基础一览](https://www.54chen.com/cn/cyber-security/)
-- [DAO and the disruption of the Chinese world](https://www.54chen.com/dao/)
-- [DAO以及对中文世界的颠覆](https://www.54chen.com/cn/dao/)
 <!-- BLOG-POST-LIST:END -->
