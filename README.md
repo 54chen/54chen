@@ -10,8 +10,8 @@ Thanks for visiting so humble place :rofl:
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
+- [Resilient AI team workflow platform design](https://www.54chen.com/big-ai-team/)
+- [弹性AI团队工作流平台设计](https://www.54chen.com/cn/big-ai-team/)
 - [区块链安全-Solidity安全建议](https://www.54chen.com/cn/solidity-security/)
 - [元启发式算法手记一 入门](https://www.54chen.com/cn/metaheuristics-1/)
-- [元启发式算法手记二 GRASP](https://www.54chen.com/cn/metaheuristics-2/)
-- [网络安全基础一览](https://www.54chen.com/cn/cyber-security/)
 <!-- BLOG-POST-LIST:END -->
