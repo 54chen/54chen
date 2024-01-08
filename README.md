@@ -10,8 +10,8 @@ Thanks for visiting so humble place :rofl:
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
+- [Quick Frontend Handbook for Backend Developers](https://54chen.com/quick-frontend-handbook-for-backend-developers/)
+- [后端工程师现代前端快速手册](https://54chen.com/%E5%90%8E%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%8E%B0%E4%BB%A3%E5%89%8D%E7%AB%AF%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C/)
 - [Understanding AI](https://54chen.com/understanding-ai/)
 - [参透AI](https://54chen.com/%E5%8F%82%E9%80%8Fai/)
-- [元启发式算法手记四 Mimetic](https://54chen.com/%E5%85%83%E5%90%AF%E5%8F%91%E5%BC%8F%E7%AE%97%E6%B3%95%E6%89%8B%E8%AE%B0%E5%9B%9B-mimetic/)
-- [Resilient AI team workflow platform design](https://54chen.com/resilient-ai-team-workflow-platform-design/)
 <!-- BLOG-POST-LIST:END -->
