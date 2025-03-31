@@ -1,12 +1,19 @@
-### Hi there <a href="https://www.54chen.com/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"></a>
-Thanks for visiting so humble place :rofl:
+### 👋 Hey, I’m John Chen (johnchan.eth)
 
-- 🔭 &nbsp;I’m currently working on something cool :wink:
-- 🌱 &nbsp;I’m currently learning DAO, Rust
-- 💬 &nbsp;Ask me about anything related to Tableau/PHP/Python/Java...
-- 📫 &nbsp;How to reach me: chenzhen@54chen.com
-- 👨‍💻 &nbsp;Read more about my projects at [54chen.com](https://www.54chen.com/)
-- ⚡ &nbsp;One More Thing: I am a researcher in Computer Science and creator in Web3.
+🛬 Relocated from **Beijing to New Zealand** with my family — shoutout to **Xiaomi** 🙏  
+💼 Working at a **global fintech company**, building things that (actually) matter  
+😷 Got locked down in Beijing during the pandemic — joined **BanklessDAO**, contributed, made memories  
+🧠 **Deep Learning A+** back in uni. Still love **AI** and **finance**.  
+🧱 Tech stack: `Python` / `Java` / `PHP` / `Tableau` / `Rust` (exploring)  
+🏞️ Hobbies: **mountain biking**, **swimming**, and avoiding surfboards since the 2024 leg fracture (cheers, ACC 🦴)
+
+---
+
+🌐 Projects & blog: [54chen.com](https://54chen.com)  
+📫 Email: [chenzhen@54chen.com](mailto:chenzhen@54chen.com)  
+🐦 Twitter: [@54chencom](https://twitter.com/54chencom)  
+💼 ENS: `johnchan.eth`
+
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
