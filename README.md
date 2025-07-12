@@ -17,8 +17,8 @@
 
 📕 &nbsp;**Latest Blog Posts(EN & CN)**
 <!-- BLOG-POST-LIST:START -->
+- [How to use Azure, .Net, TypeScript and TailwindCSS to build a 3D web game](https://54chen.com/how-to-use-azure-.net-typescript-and-tailwindcss-to-build-a-3d-web-game/)
 - [Quick Backend Handbook for Frontend Developers](https://54chen.com/quick-backend-handbook-for-frontend-developers/)
 - [前端工程师后端快速手册](https://54chen.com/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%90%8E%E7%AB%AF%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C/)
 - [Quick Frontend Handbook for Backend Developers](https://54chen.com/quick-frontend-handbook-for-backend-developers/)
-- [后端工程师现代前端快速手册](https://54chen.com/%E5%90%8E%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E7%8E%B0%E4%BB%A3%E5%89%8D%E7%AB%AF%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C/)
 <!-- BLOG-POST-LIST:END -->
