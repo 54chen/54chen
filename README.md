@@ -1,4 +1,4 @@
-### 👋 Hey, I’m John Chen (johnchan.eth)
+### 👋 Hey, I’m John Chen (johnchan.eth) :)
 
 🛬 Relocated from **Beijing to New Zealand** with my family — shoutout to **Xiaomi** 🙏  
 💼 Working at a **global fintech company**, building things that (actually) matter  
